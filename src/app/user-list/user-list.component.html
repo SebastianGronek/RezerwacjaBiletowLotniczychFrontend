@@ -1,0 +1,18 @@
+<p>List of all users</p>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">First name</th>
+    <th scope="col">Last name</th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of users">
+    <th scope="row"> {{user.id}}</th>
+    <td> {{ user.userFirstName}}</td>
+    <td> {{ user.userName}}</td>
+  </tr>
+  </tbody>
+</table>

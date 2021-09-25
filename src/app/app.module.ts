@@ -9,12 +9,14 @@ import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {routerConfig} from "./router-config.config";
 import {RouterModule} from "@angular/router";
+import { UserListComponent } from './user-list/user-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FlightListComponent,
     UserAddComponent,
+    UserListComponent,
 
   ],
   imports: [
