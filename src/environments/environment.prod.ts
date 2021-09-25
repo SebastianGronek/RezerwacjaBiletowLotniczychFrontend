@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  backendUrl: 'https://rezerwacja-biletow-frontend.herokuapp.com'
 };
