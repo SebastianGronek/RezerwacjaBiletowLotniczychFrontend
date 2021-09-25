@@ -1,0 +1,11 @@
+<div class="form-group">
+  <label for="userFirstName">First name</label>
+  <input type="text" class="form-control" id="userFirstName"
+         required
+         [(ngModel)]="model.userFirstName" name="userFirstName">
+  <label for="userName">User name</label>
+  <input type="text" class="form-control" id="userName"
+         required
+         [(ngModel)]="model.userName" name="userName">
+  <button type="button" class="btn btn-primary" (click)="submit()">Submit</button>
+</div>
