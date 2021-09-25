@@ -5,11 +5,11 @@ const path = require('path');
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static(__dirname + '/dist/Rezerwacja-Biletow-Lotniczych-Frontend'));
+app.use(express.static(__dirname + '/dist/Rezerwacje-Biletow-Lotniczych-Frontend'));
 
 app.get('/*', function(req,res) {
 
-  res.sendFile(path.join(__dirname+'/dist/Rezerwacja-Biletow-Lotniczych-Frontend/index.html'));
+  res.sendFile(path.join(__dirname+'/dist/Rezerwacje-Biletow-Lotniczych-Frontend/index.html'));
 });
 
 // Start the app by listening on the default Heroku port
