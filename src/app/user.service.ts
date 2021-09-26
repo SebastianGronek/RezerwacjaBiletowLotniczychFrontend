@@ -14,10 +14,18 @@ export class UserService {
   }
 
   create(user: User): Observable<User> {
-    return this.httpClient.post<User>(environment.backendUrl + '/addUser', user, {headers: contentHeaders})
+    return this.httpClient.post<User>(environment.backendUrl + '/user/addUser', user, {headers: contentHeaders})
   }
 
   getAllUsers(): Observable<[User]> {
-    return this.httpClient.get<[User]>(environment.backendUrl + '/allUsers', {headers: contentHeaders})
+    return this.httpClient.get<[User]>(environment.backendUrl + '/user/allUsers', {headers: contentHeaders})
+  }
+
+  getById(id: number): Observable<User> {
+    return this.httpClient.get<User>(environment.backendUrl + '/user/' + id, {headers: contentHeaders})
+  }
+
+  deleteUser(user: User): Observable<User> {
+    return this.httpClient.delete<User>(environment.backendUrl + '/user/delete/' + user.id, {headers: contentHeaders});
   }
 }
