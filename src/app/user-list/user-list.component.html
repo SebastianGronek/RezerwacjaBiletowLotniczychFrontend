@@ -13,6 +13,7 @@
     <td> {{ user.userFirstName}}</td>
     <td> {{ user.userName}}</td>
     <button class="button button-red" (click)="delete(user)">Delete</button>
+    <button class="button button-red" (click)="update(user.userId)">Update</button>
   </tr>
   </tbody>
 </table>
