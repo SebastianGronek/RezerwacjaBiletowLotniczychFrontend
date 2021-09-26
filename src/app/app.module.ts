@@ -11,6 +11,7 @@ import {routerConfig} from "./router-config.config";
 import {RouterModule} from "@angular/router";
 import { UserListComponent } from './user-list/user-list.component';
 import { UserComponent } from './user/user.component';
+import { UpdateUserComponent } from './update-user/update-user.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { UserComponent } from './user/user.component';
     UserAddComponent,
     UserListComponent,
     UserComponent,
+    UpdateUserComponent,
 
   ],
   imports: [
