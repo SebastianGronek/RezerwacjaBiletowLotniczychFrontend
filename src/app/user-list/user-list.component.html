@@ -5,14 +5,14 @@
     <th scope="col">#</th>
     <th scope="col">First name</th>
     <th scope="col">Last name</th>
-
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let user of users">
-    <th scope="row"> {{user.id}}</th>
+    <th scope="row"> {{user.userId}}</th>
     <td> {{ user.userFirstName}}</td>
     <td> {{ user.userName}}</td>
+    <button class="button button-red" (click)="delete(user)">Delete</button>
   </tr>
   </tbody>
 </table>

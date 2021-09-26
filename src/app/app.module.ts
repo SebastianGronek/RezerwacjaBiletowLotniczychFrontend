@@ -10,6 +10,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {routerConfig} from "./router-config.config";
 import {RouterModule} from "@angular/router";
 import { UserListComponent } from './user-list/user-list.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { UserListComponent } from './user-list/user-list.component';
     FlightListComponent,
     UserAddComponent,
     UserListComponent,
+    UserComponent,
 
   ],
   imports: [
