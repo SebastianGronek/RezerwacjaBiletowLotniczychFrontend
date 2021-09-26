@@ -1,14 +1,14 @@
 import {Flight} from "./flight.model";
 
 export class User {
-  id: number;
+  userId: number;
   userFirstName: string;
   userName: string;
   ticketList?: [Flight];
 
 
   constructor(id: number, userFirstName: string, userName: string) {
-    this.id = id;
+    this.userId = id;
     this.userFirstName = userFirstName;
     this.userName = userName;
   }

@@ -26,6 +26,6 @@ export class UserService {
   }
 
   deleteUser(user: User): Observable<User> {
-    return this.httpClient.delete<User>(environment.backendUrl + '/user/delete/' + user.id, {headers: contentHeaders});
+    return this.httpClient.delete<User>(environment.backendUrl + '/user/delete/' + user.userId, {headers: contentHeaders});
   }
 }
