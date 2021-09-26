@@ -24,12 +24,10 @@ export class UserListComponent implements OnInit {
 
   delete(user: User) {
     this.userService.deleteUser(user).subscribe((deletedUser: User) => {
-      let index:any = this.users?.indexOf(deletedUser)
-      if (index > -1) {
-        if(this.users!==undefined)
-        this.users.splice(index, 1)
-      }
-      this.router.navigate(['/user/allUsers'])
+      this.userService.getAllUsers()
+        .subscribe((users: [User]) => {
+          this.users = users;
+        })
     })
   }
 }

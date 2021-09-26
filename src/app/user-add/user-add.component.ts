@@ -20,7 +20,7 @@ export class UserAddComponent implements OnInit {
 
   submit(){
     this.userService.create(this.model).subscribe(()=>{
-      this.router.navigate(['/addUser'])
+      this.router.navigate(['/user/allUsers'])
     })
   }
 }
