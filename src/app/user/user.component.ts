@@ -12,10 +12,10 @@ export class UserComponent implements OnInit {
 
   user?:User;
   sub:any;
-  constructor(private userService:UserService, private route:ActivatedRoute) { }
+  constructor(private userService:UserService, private router:ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.sub = this.route.params.subscribe(params => {
+    this.sub = this.router.params.subscribe(params => {
       let id = +params['id']; // (+) converts string 'id' to a number
 
       this.userService.getById(id).subscribe((user: User) => {

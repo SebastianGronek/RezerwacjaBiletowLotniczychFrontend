@@ -23,4 +23,6 @@ export class UserAddComponent implements OnInit {
       this.router.navigate(['/user/allUsers'])
     })
   }
+
+
 }
