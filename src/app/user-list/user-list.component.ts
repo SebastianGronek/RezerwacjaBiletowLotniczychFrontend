@@ -11,7 +11,8 @@ export class UserListComponent implements OnInit {
 
   users?: [User]
 
-  constructor(private userService:UserService) {}
+  constructor(private userService: UserService) {
+  }
 
   ngOnInit(): void {
     this.userService.getAllUsers()
@@ -20,5 +21,13 @@ export class UserListComponent implements OnInit {
       })
   }
 
-
+  delete(user: User) {
+    this.userService.deleteUser(user).subscribe((deletedUser: User) => {
+      let index:any = this.users?.indexOf(deletedUser)
+      if (index > -1) {
+        if(this.users!==undefined)
+        this.users.splice(index, 1)
+      }
+    })
+  }
 }
