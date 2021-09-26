@@ -28,4 +28,8 @@ export class UserService {
   deleteUser(user: User): Observable<User> {
     return this.httpClient.delete<User>(environment.backendUrl + '/user/delete/' + user.userId, {headers: contentHeaders});
   }
+
+  updateUser(id:Number, user:User): Observable<User> {
+    return this.httpClient.put<User>(environment.backendUrl + '/user/update/'+id, user, {headers: contentHeaders})
+  }
 }
