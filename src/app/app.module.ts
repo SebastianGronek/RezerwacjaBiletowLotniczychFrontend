@@ -12,6 +12,7 @@ import {RouterModule} from "@angular/router";
 import { UserListComponent } from './user-list/user-list.component';
 import { UserComponent } from './user/user.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
+import { FlightFindComponent } from './flight-find/flight-find.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { UpdateUserComponent } from './update-user/update-user.component';
     UserListComponent,
     UserComponent,
     UpdateUserComponent,
+    FlightFindComponent,
 
   ],
   imports: [
