@@ -9,7 +9,6 @@ import {environment} from "../environments/environment";
   providedIn: "root",
 })
 export class FlightService {
-  // private apiUrl = 'http://localhost:8085'
 
 
   constructor(private httpClient: HttpClient) {
@@ -17,5 +16,15 @@ export class FlightService {
 
   getAllFlights(): Observable<[Flight]> {
     return this.httpClient.get<[Flight]>(environment.backendUrl + '/allFlights', {headers: contentHeaders})
+  }
+
+
+  getChosenFlights(startingLocation: Text, destination: Text, dateOfFlight: Text): Observable<[Flight]> {
+    const params = {
+      'startingLocation': startingLocation,
+      'destination': destination,
+      'dateOfFlight': dateOfFlight
+    }
+    return this.httpClient.get<[Flight]>(environment.backendUrl + '/findFlight', {params:params}, {headers: contentHeaders})
   }
 }
