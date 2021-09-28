@@ -9,10 +9,17 @@ import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {routerConfig} from "./router-config.config";
 import {RouterModule} from "@angular/router";
-import { UserListComponent } from './user-list/user-list.component';
-import { UserComponent } from './user/user.component';
-import { UpdateUserComponent } from './update-user/update-user.component';
-import { FlightFindComponent } from './flight-find/flight-find.component';
+import {UserListComponent} from './user-list/user-list.component';
+import {UserComponent} from './user/user.component';
+import {UpdateUserComponent} from './update-user/update-user.component';
+import {FlightFindComponent} from './flight-find/flight-find.component';
+import {MaterialModule} from "./material.module";
+/*import {MatButtonModule} from "@angular/material/button";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {MatNativeDateModule} from '@angular/material/core';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';*/
 
 @NgModule({
   declarations: [
@@ -23,14 +30,14 @@ import { FlightFindComponent } from './flight-find/flight-find.component';
     UserComponent,
     UpdateUserComponent,
     FlightFindComponent,
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(routerConfig)
+    RouterModule.forRoot(routerConfig),
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
