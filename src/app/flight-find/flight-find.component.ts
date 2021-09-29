@@ -23,10 +23,15 @@ export class FlightFindComponent implements OnInit {
 
   submit() {
     if (this.startingLocation !== undefined && this.destination !== undefined && this.dateOfFlight !== undefined) {
-      this.flightService.getChosenFlights(this.startingLocation, this.destination, this.dateOfFlight).subscribe((flights: [Flight]) => {
+      var formattedDate = new Date(this.dateOfFlight).toISOString();
+      this.flightService.getChosenFlights(this.startingLocation, this.destination, formattedDate).subscribe((flights: [Flight]) => {
           this.flights = flights;
         }
       )
+    } else if (this.startingLocation !== undefined && this.destination !== undefined) {
+      this.flightService.getChosenFlights(this.startingLocation, this.destination, "").subscribe((flights: [Flight]) => {
+        this.flights = flights;
+      })
     }
   }
 }

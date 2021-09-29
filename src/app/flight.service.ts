@@ -23,11 +23,6 @@ export class FlightService {
     const params = new HttpParams().set('start', startingLocation)
       .set('end', destination)
       .set('time', dateOfFlight)
-    /*{
-      'startingLocation': startingLocation,
-      'destination': destination,
-      'dateOfFlight': dateOfFlight
-    }*/
     return this.httpClient.get<[Flight]>(environment.backendUrl + '/findFlight', {params}/*, {headers: contentHeaders}*/)
   }
 }
