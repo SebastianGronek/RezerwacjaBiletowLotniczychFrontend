@@ -3,7 +3,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
-import {MatNativeDateModule} from '@angular/material/core';
+import {MAT_DATE_LOCALE, MatNativeDateModule} from '@angular/material/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -24,7 +24,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatNativeDateModule,
     BrowserAnimationsModule
   ],
-  providers: [MatDatepickerModule],
+  providers: [MatDatepickerModule, { provide: MAT_DATE_LOCALE, useValue: 'en-GB' }
+  ],
 })
 
 export class MaterialModule {
