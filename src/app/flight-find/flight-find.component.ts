@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {Flight} from "../shared/models/flight.model";
 import {FlightService} from "../flight.service";
 import {Router} from "@angular/router";
-import {formatDate} from "@angular/common";
 
 @Component({
   selector: 'app-flight-find',
