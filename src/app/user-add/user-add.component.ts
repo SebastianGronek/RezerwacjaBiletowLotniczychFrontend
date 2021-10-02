@@ -11,7 +11,7 @@ import {Router} from "@angular/router";
 export class UserAddComponent implements OnInit {
 
 
-  model = new User(0, "", "")
+  model = new User(0, "", "", "")
 
   constructor(private userService: UserService, private router: Router) {}
 

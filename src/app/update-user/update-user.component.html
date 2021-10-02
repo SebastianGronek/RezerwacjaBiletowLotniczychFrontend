@@ -1,13 +1,18 @@
 <div class="form-group">
   <p>Updating user</p>
   <div *ngIf="user!==undefined">
-  <label for="userFirstName">First name</label>
-  <input type="text" class="form-control" id="userFirstName"
-         required
-         [(ngModel)]="user.userFirstName" name="userFirstName">
-  <label for="userName">User name</label>
-  <input type="text" class="form-control" id="userName"
-         required
-         [(ngModel)]="user.userName" name="userName">
-  <button type="button" class="btn btn-primary" (click)="update()">Submit</button>
+    <label for="userFirstName">First name</label>
+    <input type="text" class="form-control" id="userFirstName"
+           required
+           [(ngModel)]="user.userFirstName" name="userFirstName">
+    <label for="userName">User name</label>
+    <input type="text" class="form-control" id="userName"
+           required
+           [(ngModel)]="user.userLastName" name="userName">
+    <label for="login">Login</label>
+    <input type="text" class="form-control" id="login"
+           required
+           [(ngModel)]="user.login" name="login">
+    <button type="button" class="btn btn-primary" (click)="update()">Submit</button>
+  </div>
 </div>

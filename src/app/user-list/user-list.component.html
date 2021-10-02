@@ -5,13 +5,15 @@
     <th scope="col">#</th>
     <th scope="col">First name</th>
     <th scope="col">Last name</th>
+    <th scope="col">Login</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let user of users">
     <th scope="row"> {{user.userId}}</th>
     <td> {{ user.userFirstName}}</td>
-    <td> {{ user.userName}}</td>
+    <td> {{ user.userLastName}}</td>
+    <td> {{ user.login}}</td>
     <button class="button button-red" (click)="delete(user)">Delete</button>
     <button class="button button-red" (click)="update(user.userId)">Update</button>
   </tr>

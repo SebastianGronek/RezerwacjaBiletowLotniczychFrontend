@@ -6,6 +6,10 @@
   <label for="userName">User name</label>
   <input type="text" class="form-control" id="userName"
          required
-         [(ngModel)]="model.userName" name="userName">
+         [(ngModel)]="model.userLastName" name="userName">
+  <label for="login">Login</label>
+  <input type="text" class="form-control" id="login"
+         required
+         [(ngModel)]="model.login" name="login">
   <button type="button" class="btn btn-primary" (click)="submit()">Submit</button>
 </div>
