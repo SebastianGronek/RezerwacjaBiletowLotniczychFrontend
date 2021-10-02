@@ -3,13 +3,15 @@ import {Flight} from "./flight.model";
 export class User {
   userId: number;
   userFirstName: string;
-  userName: string;
+  userLastName: string;
+  login: string;
   ticketList?: [Flight];
 
 
-  constructor(id: number, userFirstName: string, userName: string) {
+  constructor(id: number, userFirstName: string, userName: string, login: string) {
     this.userId = id;
     this.userFirstName = userFirstName;
-    this.userName = userName;
+    this.userLastName = userName;
+    this.login = login;
   }
 }
