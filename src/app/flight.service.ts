@@ -25,4 +25,9 @@ export class FlightService {
       .set('time', dateOfFlight)
     return this.httpClient.get<[Flight]>(environment.backendUrl + '/findFlight', {params}/*, {headers: contentHeaders}*/)
   }
+
+  getLocationFilteredByName(input: string, url: string): Observable<[string]> {
+    const params = new HttpParams().set('input', input)
+    return this.httpClient.get<[string]>(environment.backendUrl + "/getAll"+url, {params});
+  }
 }
