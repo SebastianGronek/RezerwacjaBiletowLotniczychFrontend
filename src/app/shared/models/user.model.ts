@@ -1,11 +1,11 @@
-import {Flight} from "./flight.model";
+import {Ticket} from "./ticket.model";
 
 export class User {
   userId: number;
   userFirstName: string;
   userLastName: string;
   login: string;
-  ticketList?: [Flight];
+  ticketList?: [Ticket];
 
 
   constructor(id: number, userFirstName: string, userName: string, login: string) {

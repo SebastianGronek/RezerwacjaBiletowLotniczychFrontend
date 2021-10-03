@@ -5,7 +5,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {FlightListComponent} from './flight-list/flight-list.component';
 import {UserAddComponent} from './user-add/user-add.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {routerConfig} from "./router-config.config";
 import {RouterModule} from "@angular/router";
@@ -14,6 +14,8 @@ import {UserComponent} from './user/user.component';
 import {UpdateUserComponent} from './update-user/update-user.component';
 import {FlightFindComponent} from './flight-find/flight-find.component';
 import {MaterialModule} from "./material.module";
+import {MatAutocompleteModule} from "@angular/material/autocomplete";
+import {MatOptionModule} from "@angular/material/core";
 
 @NgModule({
   declarations: [
@@ -31,7 +33,10 @@ import {MaterialModule} from "./material.module";
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(routerConfig),
-    MaterialModule
+    MaterialModule,
+    MatAutocompleteModule,
+    MatOptionModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
