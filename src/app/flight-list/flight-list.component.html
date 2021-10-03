@@ -1,4 +1,4 @@
-<p>List of all flights</p>
+<p>Lista wszystkich lotów</p>
 <table class="table">
   <thead>
   <tr>
@@ -13,7 +13,7 @@
   <tbody>
   <tr *ngFor="let flight of flights">
     <th scope="row"> {{flight.id}}</th>
-    <td> {{ flight.startingLocation }}</td>
+    <td scope="row"> {{ flight.startingLocation }}</td>
     <td> {{ flight.destination }}</td>
     <td> {{ flight.durationOfFlight }}</td>
     <td> {{ flight.dateOfFlight }}</td>

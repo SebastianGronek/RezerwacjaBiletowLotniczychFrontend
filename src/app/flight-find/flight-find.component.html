@@ -14,8 +14,8 @@
     <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
     <mat-datepicker #datepicker>
       <mat-datepicker-actions>
-        <button mat-button matDatepickerCancel>Cancel</button>
-        <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+        <button mat-button matDatepickerCancel class="btn btn-danger">Cancel</button>
+        <button mat-raised-button color="primary" matDatepickerApply class="btn btn-success">Apply</button>
       </mat-datepicker-actions>
     </mat-datepicker>
     <mat-error *ngIf="resultPickerModel.hasError('matDatepickerParse')"> /// if date is necessary, this is good way of showing that input is incorrect
@@ -23,11 +23,11 @@
       is not a valid date!
     </mat-error>
   </mat-form-field>
-  <button type="button" class="btn btn-primary" (click)="submit()">Submit</button>
+  <button type="button" class="btn btn-success" (click)="submit()">Submit</button>
 </div>
 
 <div *ngIf="flights!==undefined&&flights.length>0">
-  <p>List of all flights</p>
+  <p>Lista wszystkich lotów</p>
   <table class="table">
     <thead>
     <tr>

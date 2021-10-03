@@ -13,3 +13,17 @@
          [(ngModel)]="model.login" name="login">
   <button type="button" class="btn btn-primary" (click)="submit()">Submit</button>
 </div>
+
+<form class="form-signin">
+  <h1 class="h3 mb-3 font-weight-normal">Logowanie</h1>
+  <label for="email" class="sr-only">Adres e-mail</label>
+  <input type="email" id="email" class="form-control" placeholder="Adres e-mail" required autofocus>
+  <label for="password" class="sr-only">Hasło</label>
+  <input type="password" id="password" class="form-control" placeholder="Hasło" required>
+  <div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me"> Zapamiętaj mnie
+    </label>
+  </div>
+  <button class="btn btn-lg btn-dark btn-block" type="submit">Zaloguj</button>
+</form>

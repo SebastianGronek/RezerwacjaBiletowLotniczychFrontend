@@ -1,2 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+/* body {
+	background-image: url(samoloty/logo 1.jpg);
+	background-position: top center;
+	background-repeat: no-repeat;
+}*/
+
+/*div {
+    color: red;
+}
+div {
+    text-align: center;
+
+}
+p {
+    color: rgb(48, 189, 250);
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+}
+th {
+    color: rgb(48, 189, 200);
+    text-align: center;
+}
+
+tr {
+    background-color: rgba(48, 213, 200, 0.1);
+    text-align: center;
+}
+
+
+/*background-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'><path....*/
+/*@import '~@angular/material/prebuilt-themes/indigo-pink.css';*/
