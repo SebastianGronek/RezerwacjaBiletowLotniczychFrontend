@@ -1,9 +1,9 @@
 import {Injectable} from "@angular/core";
 import {HttpClient, HttpParams} from "@angular/common/http";
-import {Flight} from "./shared/models/flight.model";
+import {Flight} from "../shared/models/flight.model";
 import {Observable} from "rxjs";
-import {contentHeaders} from "./http-config";
-import {environment} from "../environments/environment";
+import {contentHeaders} from "../http-config";
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: "root",
