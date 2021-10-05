@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Flight} from "../shared/models/flight.model";
-import {FlightService} from "../flight.service";
+import {FlightService} from "../services/flight.service";
 
 @Component({
   selector: 'app-flight-list',
