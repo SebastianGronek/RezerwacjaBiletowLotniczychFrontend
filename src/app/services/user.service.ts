@@ -29,7 +29,24 @@ export class UserService {
     return this.httpClient.delete<User>(environment.backendUrl + '/user/delete/' + user.userId, {headers: contentHeaders});
   }
 
-  updateUser(id:Number, user:User): Observable<User> {
-    return this.httpClient.put<User>(environment.backendUrl + '/user/update/'+id, user, {headers: contentHeaders})
+  updateUser(id: Number, user: User): Observable<User> {
+    return this.httpClient.put<User>(environment.backendUrl + '/user/update/' + id, user, {headers: contentHeaders})
+  }
+
+  getPublicContent(): Observable<any> {
+    return this.httpClient.get(environment.backendUrl + '/all', {responseType: 'text'});
+  }
+
+  getUserBoard(): Observable<any> {
+    return this.httpClient.get(environment.backendUrl + '/user', {responseType: 'text'});
+  }
+
+  getModeratorBoard(): Observable<any> {
+    return this.httpClient.get(environment.backendUrl + '/mod', {responseType: 'text'});
+  }
+
+  getAdminBoard(): Observable<any> {
+    return this.httpClient.get(environment.backendUrl + '/admin', {responseType: 'text'});
   }
 }
+
